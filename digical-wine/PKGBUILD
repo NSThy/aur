@@ -1,0 +1,20 @@
+# Maintainer: nsthy <nsthy@hotmail.com>
+
+pkgname=digical-wine
+pkgver=1.0
+pkgrel=1
+pkgdesc="Circuit calculator"
+arch=('x86_64')
+url="https://github.com/NSThy/deb/raw/main/linux"
+license=('MIT')
+depends=(
+    'wine'
+)
+source=(
+    "https://github.com/NSThy/deb/raw/main/linux/Digical-${pkgver}-deb-wine.deb"    
+)
+sha512sums=('979ac6b69258cb77e87417e45f992edfda5e79feed82343fcfa1fbcbc152d4f80793562ad7807dd9b4dcef2c3e4139306eadcfc85aaa417951b7cb4faaec6a51')
+
+package() {
+    tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"
+}

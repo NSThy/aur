@@ -1,0 +1,26 @@
+# Maintainer: nsthy <nsthy@hotmail.com>
+
+pkgname=boardviewer-wine
+pkgver=2.0.1.9
+pkgrel=1
+pkgdesc="Boardview is a type of files containing information about printed circuit boards, their components, used signals, test points and more. These files may have following extensions: .asc, .bdv, .brd, .bv, .cad, .cst, .gr, .f2b, .fz. and others. "
+arch=('x86_64')
+url="http://boardviewer.net/"
+license=('MIT')
+depends=(
+    'wine'
+)
+conflicts=('wine-mono')
+
+source=(
+    "https://github.com/NSThy/deb/raw/main/linux/BoardViewer-${pkgver}-deb-wine.deb"
+)
+sha512sums=('96916e3c31e5ce99e0737d909f63ed0738a5e9059b4ea011b5de5ecac72456587ba6de4960cbaca8ee3bd95ffd1b5c02a02885dd98cc76fa577cd0b1e21cfd13')
+
+package() {
+    tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"
+}
+
+post_install() {
+  echo "You need to install .net 4.0 to get this run !!!"
+}

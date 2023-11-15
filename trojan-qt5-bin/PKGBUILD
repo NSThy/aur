@@ -1,0 +1,21 @@
+# Maintainer: nsthy <nsthy@hotmail.com>
+
+pkgname=trojan-qt5-bin
+pkgver=1.4.0
+pkgrel=1
+pkgdesc="cross-platform ss/ssr/vmess/trojan(go) GUI client , built with QT5 [APPIMAGE]"
+arch=('x86_64')
+url="https://github.com/xswvfr/Trojan-Qt5"
+license=('MIT')
+options=(!strip)
+depends=(
+    'qt5-base'
+)
+source=(
+    "https://github.com/NSThy/deb/releases/download/deb/Trojan-QT5-${pkgver}-deb-amd64.deb" 
+)
+sha512sums=('633d3de7dcd27e9f820a2a66c4d2819ac1a6d6ef83a592ac85c65f4aede7b4cdd43eeeca91de32eae2aebc8687dd2d12c311d70492387a580b4b365d7c401ec6')
+
+package() {
+    tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"
+}

@@ -13,7 +13,7 @@ depends=(
 conflicts=('wine-mono')
 
 source=(
-    "https://github.com/NSThy/deb/raw/main/linux/BoardViewer-${pkgver}-wine.deb"
+    "https://github.com/NSThy/deb/releases/download/linux/BoardViewer-${pkgver}-wine.deb"
 )
 sha512sums=('69410e0702c4cccdf32181a21c86b183c12438d769fcb612e9e077ddc3acfd8672668f0dd6ebe99691c770ea6d8d8a75ad5a7c76ef57206de9e4786fe37a86de')
 
@@ -22,5 +22,6 @@ package() {
 }
 
 post_install() {
+  echo "Uninstall wine mono !!!"
   echo "You need to install .net 4.0 to get this run !!!"
 }

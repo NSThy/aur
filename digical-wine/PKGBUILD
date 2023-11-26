@@ -11,7 +11,7 @@ depends=(
     'wine'
 )
 source=(
-    "https://github.com/NSThy/deb/raw/main/linux/Digical-${pkgver}-wine.deb"    
+    "https://github.com/NSThy/deb/releases/download/linux/Digical-${pkgver}-wine.deb"    
 )
 sha512sums=('f593d982d75501b982d3fac78d85c22bb53acb24684a1056f3c6364582a6914c906d0ff36555b3972f77141b80d60d59036f0e6a14b483b4819f3b1bf945ddeb')
 

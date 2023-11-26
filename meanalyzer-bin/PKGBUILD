@@ -16,7 +16,7 @@ depends=(
     'python-altgraph'
 )
 source=(
-    "https://github.com/NSThy/deb/raw/main/linux/MEAnalyzer-1.283.3-r${pkgver}-deb-amd64.deb"
+    "https://github.com/NSThy/deb/raw/main/linux/MEAnalyzer-1.283.3-r${pkgver}-amd64.deb"
 )
 sha512sums=('8ddcd558cd1afe698e9a6dcb4e8c033c4b07ea4ab6d6e037a56fdfccbd7643cb0b4277cf85144dff4278f4d565ee41354fd3db0fca5928e5a12b0bc241fff739')
 

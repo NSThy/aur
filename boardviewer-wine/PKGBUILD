@@ -13,9 +13,9 @@ depends=(
 conflicts=('wine-mono')
 
 source=(
-    "https://github.com/NSThy/deb/raw/main/linux/BoardViewer-${pkgver}-deb-wine.deb"
+    "https://github.com/NSThy/deb/raw/main/linux/BoardViewer-${pkgver}-wine.deb"
 )
-sha512sums=('96916e3c31e5ce99e0737d909f63ed0738a5e9059b4ea011b5de5ecac72456587ba6de4960cbaca8ee3bd95ffd1b5c02a02885dd98cc76fa577cd0b1e21cfd13')
+sha512sums=('69410e0702c4cccdf32181a21c86b183c12438d769fcb612e9e077ddc3acfd8672668f0dd6ebe99691c770ea6d8d8a75ad5a7c76ef57206de9e4786fe37a86de')
 
 package() {
     tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"

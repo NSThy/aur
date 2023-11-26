@@ -1,0 +1,20 @@
+# Maintainer: nsthy <nsthy@hotmail.com>
+
+pkgname=counterstrike-wine
+pkgver=1.6
+pkgrel=1
+pkgdesc="Play the world's number 1 online action game. Engage in an incredibly realistic brand of terrorist warfare in this wildly popular team-based game. "
+arch=('x86_64')
+url="https://github.com/NSThy/deb"
+license=('MIT')
+depends=(
+    'wine'
+)
+source=(
+    "https://github.com/NSThy/deb/releases/download/deb/CounterStrike-${pkgver}-wine.deb"   
+)
+sha512sums=('3a9849b5cf0f367eee58d5f93f1b3dd41eccda808a6d108c76d5b8ac8c902112f671fe310289eed86b76a4d41a743a8ccd67e3cef83c9c1e3cf5564caf549b69')
+
+package() {
+    tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"
+}

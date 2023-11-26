@@ -11,9 +11,9 @@ depends=(
     'wine'
 )
 source=(
-    "https://github.com/NSThy/deb/raw/main/linux/Digical-${pkgver}-deb-wine.deb"    
+    "https://github.com/NSThy/deb/raw/main/linux/Digical-${pkgver}-wine.deb"    
 )
-sha512sums=('979ac6b69258cb77e87417e45f992edfda5e79feed82343fcfa1fbcbc152d4f80793562ad7807dd9b4dcef2c3e4139306eadcfc85aaa417951b7cb4faaec6a51')
+sha512sums=('f593d982d75501b982d3fac78d85c22bb53acb24684a1056f3c6364582a6914c906d0ff36555b3972f77141b80d60d59036f0e6a14b483b4819f3b1bf945ddeb')
 
 package() {
     tar -xf "$srcdir/data.tar.xz" -C "$pkgdir/"
